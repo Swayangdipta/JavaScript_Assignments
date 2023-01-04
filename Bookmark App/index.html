@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark App</title>
+    <meta name="description" content="A single place for all your important website links.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="app_title">Bookmark App</h1>
+    </header>
+
+    <section class="bookmark_section">
+        <section class="add_bookmark_section">
+            <form class="add_bookmark_form"  onsubmit="addBookmark(event)">
+                <label for="title" class="add_bookmark_label">Site Name</label>
+                <input type="text" placeholder="Ex. Facebook" name="title" id="title" class="add_bookmark_input" />
+
+                <label for="link" class="add_bookmark_label">Site URL</label>
+                <input type="url" placeholder="Ex. https://www.facebook.com" name="link" id="link" class="add_bookmark_input" />
+
+                <span class="add_bookmark_checkWrapper">
+                    <input type="checkbox" name="important" id="important" class="add_bookmark_checkbox">
+                    Set as important.
+                </span>
+
+                <button type="submit" class="add_bookmark_button">Add Bookmark</button>
+            </form>            
+        </section>
+
+        <section class="showBookmarks">
+            <div id="importantMarks">
+                <span class="marksTitle marksTitleImportant">
+                    <h1>Important</h1>
+                    <i id="impExpand" onclick="expandSect('imp')" class="fa-solid fa-chevron-down"></i>
+                    <i id="impMin" onclick="minimizeSect('imp')" class="fa-solid fa-chevron-up"></i>
+                </span>
+            </div>
+            <div id="normalMarks">
+                <span class="marksTitle">
+                    <h1 >Others</h1>
+                    <i id="normExpand" onclick="expandSect('normal')" class="fa-solid fa-chevron-down"></i>
+                    <i id="normMin" onclick="minimizeSect('normal')" class="fa-solid fa-chevron-up"></i>
+                </span>
+            </div>
+
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

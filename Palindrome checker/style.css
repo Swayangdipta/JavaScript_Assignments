@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(0, 1, 41);
+    height: 100%;
+}
+
+.checkerWrapper{
+    width: 100vw;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#checkerInput{
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    text-indent: 10px;
+}
+
+#checkerBtn{
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: rgb(40, 255, 101);
+    font-weight: 600;
+    box-shadow: 2px 3px 14px rgb(46 46 46);
+    transition: 0.3s ease-in-out;
+}
+
+#checkerBtn:hover{
+    transition: 0.3s ease-in-out;
+    box-shadow: none;
+}
+
+.result{
+    margin-top: 30px;
+    color: antiquewhite;
+    height: 50px;
+}
+
+.projectTitle{
+    width: 100vw;
+    height: 70px;
+    background: #000;
+    color: rgb(67, 167, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

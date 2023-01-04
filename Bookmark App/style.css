@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+*,body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: rgb(8, 0, 42);
+    width: 100%;
+    min-height: 100%;
+    height: max-content;
+    overflow-x: hidden;
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+}
+
+header{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(5, 0, 26);
+    color: aliceblue;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+
+.bookmark_section{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.add_bookmark_section{
+    width: 50%;
+}
+
+.add_bookmark_form{
+    width: 100%;
+    height: max-content;
+    padding-bottom: 10px;
+    background: rgb(5, 0, 26);
+    color: rgb(217, 217, 217);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.add_bookmark_label{
+    width: 90%;
+    margin: auto;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.add_bookmark_input{
+    width: 90%;
+    margin: auto;
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-indent: 10px;
+    font-size: 18px;
+}
+
+.add_bookmark_checkWrapper{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.add_bookmark_checkbox{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.add_bookmark_button{
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    background: rgb(60, 255, 157);
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.showBookmarks{
+    width: 50%;
+    height: 70vh;
+    background: #05001a;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.showBookmarks::-webkit-scrollbar {
+    width: 5px;
+}
+
+.showBookmarks::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 143, 95);
+}
+
+#importantMarks,#normalMarks{
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    transition: ease-in-out 0.3s;
+}
+
+.containerDiv{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 0;
+}
+
+.bookmark{
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+    height: 50px;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: rgb(38, 0, 92);
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+.bookmark h3{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.bookmark h1,h3{
+    width: 90%;
+    margin: auto;
+}
+
+hr{
+    width: 90%;
+    margin: auto;
+    height: 1px;
+    outline: none;
+    background: #fff;
+    border: none;
+}
+
+.importantMark{
+    background: #f44336;
+}
+
+.importantTitle{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.deleteBookmark,.deleteImportantBookmark{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.504);
+    background: rgb(255, 45, 45);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.deleteImportantBookmark{
+    background: rgb(45, 115, 255);
+}
+
+.marksTitle{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    background: rgb(38, 0, 92);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    color: #fff;
+}
+
+.marksTitleImportant{
+    background: #f44336;
+}
+
+.marksTitle h1{
+    margin-left: 10px;
+}
+
+.marksTitle i{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#impMin,#normMin{
+    display: none;
+}
+
+@media only screen and (max-width: 720px) {
+    .bookmark_section{
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    .add_bookmark_section,.showBookmarks{
+        width: 100%;
+    }
+
+    .showBookmarks{
+        height: max-content;
+        overflow-y: unset;
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 390px){
+    .add_bookmark_label{
+        font-size: 22px;
+    }
+
+    .add_bookmark_input{
+        height: 30px;
+    }
+
+    .add_bookmark_checkWrapper{
+        font-size: 18px;
+    }
+
+    .add_bookmark_checkbox{
+        width: 18px;
+        height: 18px;
+    }
+
+    .add_bookmark_button{
+        font-size: 18px;
+    }
+}
