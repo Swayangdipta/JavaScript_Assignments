@@ -1,0 +1,1 @@
+exports.webTechs = ["React","ANgular","Vue","Node","Express"];
